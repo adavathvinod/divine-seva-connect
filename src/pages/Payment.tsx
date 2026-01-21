@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { openWhatsApp } from "@/components/WhatsAppButton";
-import { Shield, CheckCircle, Users, Phone, Copy, QrCode } from "lucide-react";
+import { Shield, CheckCircle, Users, Phone, Copy, QrCode, Award, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import srinivasPhoto from "@/assets/srinivas-owner.jpg";
 
 const UPI_ID = "srinivasttdseva@upi";
 
@@ -136,20 +137,40 @@ const Payment = () => {
 
             {/* Trust Section */}
             <div>
-              {/* Trust Banner */}
-              <div className="bg-foreground rounded-2xl p-8 mb-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center">
-                    <Users className="h-7 w-7 text-gold-light" />
-                  </div>
+              {/* Owner Profile Card */}
+              <div className="bg-foreground rounded-2xl p-6 mb-8 overflow-hidden">
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={srinivasPhoto}
+                    alt="Garidepalli Srinivas"
+                    className="w-20 h-20 rounded-full object-cover border-3 border-gold"
+                  />
                   <div>
-                    <h3 className="font-serif text-3xl font-bold text-gold-light">250+</h3>
-                    <p className="text-primary-foreground/80">Happy Devotees</p>
+                    <h3 className="font-serif text-xl font-bold text-gold-light">Garidepalli Srinivas</h3>
+                    <p className="text-primary-foreground/80 text-sm">TTD Seva Consultant</p>
+                    <div className="flex items-center gap-1 mt-1">
+                      <MapPin className="h-3 w-3 text-gold-light" />
+                      <span className="text-primary-foreground/70 text-xs">Tirupati, Andhra Pradesh</span>
+                    </div>
                   </div>
                 </div>
-                <p className="text-primary-foreground/90 leading-relaxed">
-                  Join hundreds of devotees who have trusted Srinivas TTD Seva Consultations 
-                  for their Tirumala pilgrimage bookings.
+                <div className="grid grid-cols-3 gap-3 mb-4">
+                  <div className="text-center bg-white/10 rounded-lg p-2">
+                    <p className="font-bold text-gold-light">10+</p>
+                    <p className="text-primary-foreground/70 text-xs">Years Exp.</p>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-lg p-2">
+                    <p className="font-bold text-gold-light">250+</p>
+                    <p className="text-primary-foreground/70 text-xs">Devotees</p>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-lg p-2">
+                    <p className="font-bold text-gold-light">500+</p>
+                    <p className="text-primary-foreground/70 text-xs">Visits</p>
+                  </div>
+                </div>
+                <p className="text-primary-foreground/90 text-sm leading-relaxed">
+                  "My mission is simple — to help every devotee experience Lord Venkateswara's blessings 
+                  without stress or confusion. Your trust is my greatest reward."
                 </p>
               </div>
 
