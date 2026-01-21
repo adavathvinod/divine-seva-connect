@@ -8,6 +8,7 @@ import heroImage from "@/assets/hero-tirumala.jpg";
 import sevaKalyanotsavam from "@/assets/seva-kalyanotsavam.jpg";
 import sevaDepalankara from "@/assets/seva-deepalankara.jpg";
 import sevaSuprabhatam from "@/assets/seva-suprabhatam.jpg";
+import srinivasPhoto from "@/assets/srinivas-owner.jpg";
 
 const features = [
   "Direct TTD Ticket Booking Assistance",
@@ -122,33 +123,87 @@ const Index = () => {
       {/* Trust Banner */}
       <TrustBanner />
 
-      {/* About Section */}
+      {/* About the Owner Section */}
       <section className="py-16 md:py-24 temple-pattern">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-saffron font-medium text-sm uppercase tracking-wider">About Our Service</span>
+          <div className="text-center mb-12">
+            <span className="text-saffron font-medium text-sm uppercase tracking-wider">Meet Your Guide</span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-              Dedicated to Helping Devotees
+              About Garidepalli Srinivas
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              I'm Garidepalli Srinivas, and my mission is to make your Tirumala pilgrimage 
-              smooth and blessed. With years of experience and direct connections, I help 
-              devotees from all over India book their preferred sevas and darshan slots 
-              without any hassle.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            {/* Photo */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+                <img
+                  src={srinivasPhoto}
+                  alt="Garidepalli Srinivas - TTD Seva Consultant"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                  <p className="font-serif text-xl font-bold text-white">Garidepalli Srinivas</p>
+                  <p className="text-gold-light text-sm">TTD Seva Consultant</p>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-gold rounded-xl px-4 py-2 shadow-lg">
+                <p className="font-bold text-primary-foreground text-lg">10+ Years</p>
+                <p className="text-primary-foreground/80 text-xs">Experience</p>
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div className="space-y-6">
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Namaskaram! I'm <strong className="text-foreground">Garidepalli Srinivas</strong>, 
+                  a devoted follower of Lord Venkateswara and a native of the Tirupati region. 
+                  For over a decade, I have dedicated myself to helping fellow devotees experience 
+                  the divine blessings of Tirumala.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Having visited Tirumala more than <strong className="text-foreground">500 times</strong> myself, 
+                  I understand the complexities of TTD booking systems, quota releases, and the best practices 
+                  to secure your preferred seva slots. My deep connections with the local community and 
+                  thorough knowledge of TTD processes allow me to provide genuine, hassle-free assistance.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  I believe every devotee deserves to experience the Lord's darshan without stress. 
+                  That's why I offer transparent guidance with <strong className="text-foreground">no hidden charges</strong>. 
+                  Your trust is my greatest blessing.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="bg-gold/10 rounded-xl p-4">
+                  <p className="font-serif text-2xl font-bold text-gold-dark">250+</p>
+                  <p className="text-sm text-muted-foreground">Devotees Helped</p>
+                </div>
+                <div className="bg-gold/10 rounded-xl p-4">
+                  <p className="font-serif text-2xl font-bold text-gold-dark">500+</p>
+                  <p className="text-sm text-muted-foreground">Temple Visits</p>
+                </div>
+                <div className="bg-gold/10 rounded-xl p-4">
+                  <p className="font-serif text-2xl font-bold text-gold-dark">100%</p>
+                  <p className="text-sm text-muted-foreground">Transparency</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mt-16">
             {features.map((feature, index) => (
               <div
                 key={feature}
-                className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-elevated transition-all duration-300"
+                className="bg-card rounded-xl p-4 shadow-soft border border-border hover:shadow-elevated transition-all duration-300 text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-full gradient-gold flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-primary-foreground" />
+                <div className="w-10 h-10 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
+                  <CheckCircle className="h-5 w-5 text-primary-foreground" />
                 </div>
-                <p className="font-medium text-foreground">{feature}</p>
+                <p className="font-medium text-foreground text-sm">{feature}</p>
               </div>
             ))}
           </div>
