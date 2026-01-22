@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { openWhatsApp } from "@/components/WhatsAppButton";
 import TrustBanner from "@/components/TrustBanner";
 import LiveStatus from "@/components/LiveStatus";
+import AudioPlayer from "@/components/AudioPlayer";
 import heroImage from "@/assets/hero-tirumala.jpg";
 import sevaKalyanotsavam from "@/assets/seva-kalyanotsavam.jpg";
 import sevaDepalankara from "@/assets/seva-deepalankara.jpg";
 import sevaSuprabhatam from "@/assets/seva-suprabhatam.jpg";
 import srinivasPhoto from "@/assets/srinivas-owner.jpg";
-
 const features = [
   "Direct TTD Ticket Booking Assistance",
   "Seva & Darshan Slot Availability Check",
@@ -260,6 +260,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Audio Player */}
+      <AudioPlayer />
 
       {/* Testimonials */}
       <section className="py-16 md:py-24">
