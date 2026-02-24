@@ -3,16 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import { CALL_LINK } from "@/lib/constants";
 
-import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 import hero4 from "@/assets/hero-4.jpg";
 import hero5 from "@/assets/hero-5.jpg";
+import heroPet from "@/assets/hero-pet.jpeg";
+import heroFamily from "@/assets/hero-family.jpeg";
+import heroStaircase from "@/assets/hero-staircase.jpeg";
 
 const slides = [
-  { image: hero1, title: "Balcony Invisible Grills", subtitle: "Protect Your Family with Premium Safety Solutions" },
-  { image: hero2, title: "Children Safety Invisible Grills", subtitle: "Keep Your Kids Safe Without Blocking the View" },
+  { image: heroFamily, title: "Children Safety Invisible Grills", subtitle: "Keep Your Kids Safe Without Blocking the View" },
+  { image: hero2, title: "Balcony Invisible Grills", subtitle: "Protect Your Family with Premium Safety Solutions" },
   { image: hero3, title: "Pigeon & Bird Protection Grills", subtitle: "Stop Pigeon Problems Permanently" },
+  { image: heroPet, title: "Pet Safety Invisible Grills", subtitle: "Keep Your Furry Friends Safe on Balconies" },
+  { image: heroStaircase, title: "Staircase Safety Grills", subtitle: "Prevent Falls with Elegant Invisible Grills" },
   { image: hero4, title: "Premium Stainless Steel Grills", subtitle: "Rust-Free Cables with Long Durability" },
   { image: hero5, title: "Apartment & Villa Installations", subtitle: "Professional Installation for Any Building" },
 ];
