@@ -61,12 +61,16 @@ const faqs = [
 const Index = () => {
   return (
     <Layout>
+      {/* Hero Slider */}
+      <HeroSlider />
+
       {/* Hero Section */}
       <section className="relative gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
           >
             Shiva Sakthi Invisible Grills<br />
@@ -74,7 +78,8 @@ const Index = () => {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10"
           >
@@ -82,7 +87,8 @@ const Index = () => {
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
           >
@@ -100,9 +106,6 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Hero Slider */}
-      <HeroSlider />
 
       {/* Stats Counter */}
       <StatsCounter />
