@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Phone, Check, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { CALL_LINK, BUSINESS_NAME } from "@/lib/constants";
+import { servicePages } from "@/lib/serviceData";
 
 import serviceBalconyBeforeAfter from "@/assets/service-balcony-before-after.jpeg";
 import serviceWindowBeforeAfter from "@/assets/service-window-before-after.jpeg";
@@ -13,55 +16,13 @@ import serviceCommercial from "@/assets/service-commercial.jpg";
 import serviceSports from "@/assets/service-sports.jpg";
 
 const services = [
-  {
-    image: serviceBalconyBeforeAfter,
-    title: "Balcony Invisible Grills",
-    desc: "Our Balcony Invisible Grills provide the perfect balance between safety and style. Designed with high-quality stainless steel cables, these grills ensure strong protection while maintaining a clear and open view. They prevent children from accidental falls and keep pigeons and birds away without blocking sunlight or airflow. The rust-free and weather-resistant material makes them suitable for long-term outdoor use in apartments and villas.",
-    points: ["Apartments and high-rise buildings", "Homes with children and elderly", "Bird and pigeon protection", "Modern balcony appearance"],
-    label: "Ideal for",
-  },
-  {
-    image: serviceWindowBeforeAfter,
-    title: "Window Invisible Grills",
-    desc: "Window Invisible Grills protect your home without affecting ventilation or natural light. These grills are nearly invisible and provide strong security against accidents and bird entry. They are professionally installed with tension cables that blend with your window frame and enhance the overall look of your home.",
-    points: ["Crystal clear visibility", "Strong safety barrier", "Rust-proof stainless steel", "Modern and elegant design", "Suitable for all window types"],
-    label: "Benefits",
-  },
-  {
-    image: serviceStaircase,
-    title: "Staircase Invisible Grills",
-    desc: "Staircase Invisible Grills are specially designed to prevent accidental falls and improve safety inside your home. They are ideal for houses with children and elderly family members. These grills maintain the beauty of your staircase while adding a strong layer of protection using thin stainless steel cables and premium fittings.",
-    points: ["Duplex homes", "Villas", "Apartments with internal staircases", "Child and senior citizen safety"],
-    label: "Best for",
-  },
-  {
-    image: servicePet,
-    title: "Invisible Grills for Pet Safety",
-    desc: "Our Pet Safety Invisible Grills keep your furry friends safe on balconies and windows without making them feel trapped. These grills prevent pets from slipping or jumping out while preserving openness and airflow. They are durable, pet-friendly, and professionally installed to match your home's design.",
-    points: ["Dogs and cats", "High-rise apartments", "Balcony and window safety", "Comfortable and secure living"],
-    label: "Perfect for",
-  },
-  {
-    image: serviceChildSafety,
-    title: "Invisible Grills for Child Safety",
-    desc: "Designed especially for child protection, our Child Safety Invisible Grills provide maximum security with premium tension cables and professional installation. They reduce the risk of falls and accidents while keeping your home bright and open. Parents can enjoy complete peace of mind knowing their children are safe.",
-    points: ["Strong stainless steel cables", "Child-friendly spacing", "Long-lasting durability", "Neat and invisible appearance", "Trusted installation service"],
-    label: "Features",
-  },
-  {
-    image: serviceCommercial,
-    title: "Commercial High-Rise Solutions",
-    desc: "We provide professional invisible grill installations for commercial buildings, offices, and high-rise complexes. Our solutions use industrial-grade materials suitable for large-scale safety requirements. These installations meet modern architectural needs while ensuring security and durability.",
-    points: ["Office buildings", "Shopping complexes", "Hospitals and schools", "Corporate apartments", "High-rise towers"],
-    label: "Suitable for",
-  },
-  {
-    image: serviceSports,
-    title: "Sports & Stadium Nets",
-    desc: "Our Sports & Stadium Nets are built for safety and durability in sports facilities and practice areas. These nets prevent balls from going out of bounds and protect spectators, players, and nearby property. Made with high-quality materials, they are weather-resistant and professionally installed for long-term use.",
-    points: ["Cricket nets", "Football grounds", "Badminton courts", "Stadiums and sports academies", "Training facilities"],
-    label: "Applications",
-  },
+  { image: serviceBalconyBeforeAfter, slug: "balcony-invisible-grills", title: "Balcony Invisible Grills", desc: "Our Balcony Invisible Grills provide the perfect balance between safety and style. Designed with high-quality stainless steel cables, these grills ensure strong protection while maintaining a clear and open view.", points: ["Apartments and high-rise buildings", "Homes with children and elderly", "Bird and pigeon protection", "Modern balcony appearance"], label: "Ideal for" },
+  { image: serviceWindowBeforeAfter, slug: "window-invisible-grills", title: "Window Invisible Grills", desc: "Window Invisible Grills protect your home without affecting ventilation or natural light. Nearly invisible with strong security against accidents and bird entry.", points: ["Crystal clear visibility", "Strong safety barrier", "Rust-proof stainless steel", "Modern and elegant design", "Suitable for all window types"], label: "Benefits" },
+  { image: serviceStaircase, slug: "staircase-invisible-grills", title: "Staircase Invisible Grills", desc: "Specially designed to prevent accidental falls and improve safety inside your home. Ideal for houses with children and elderly family members.", points: ["Duplex homes", "Villas", "Apartments with internal staircases", "Child and senior citizen safety"], label: "Best for" },
+  { image: servicePet, slug: "pet-safety-grills", title: "Invisible Grills for Pet Safety", desc: "Keep your furry friends safe on balconies and windows without making them feel trapped. Durable, pet-friendly, and professionally installed.", points: ["Dogs and cats", "High-rise apartments", "Balcony and window safety", "Comfortable and secure living"], label: "Perfect for" },
+  { image: serviceChildSafety, slug: "child-safety-grills", title: "Invisible Grills for Child Safety", desc: "Maximum security with premium tension cables and professional installation. Reduce the risk of falls while keeping your home bright and open.", points: ["Strong stainless steel cables", "Child-friendly spacing", "Long-lasting durability", "Neat and invisible appearance", "Trusted installation service"], label: "Features" },
+  { image: serviceCommercial, slug: "commercial-invisible-grills", title: "Commercial High-Rise Solutions", desc: "Professional invisible grill installations for commercial buildings, offices, and high-rise complexes with industrial-grade materials.", points: ["Office buildings", "Shopping complexes", "Hospitals and schools", "Corporate apartments", "High-rise towers"], label: "Suitable for" },
+  { image: serviceSports, slug: "sports-stadium-nets", title: "Sports & Stadium Nets", desc: "Built for safety and durability in sports facilities. Prevent balls from going out of bounds and protect spectators and property.", points: ["Cricket nets", "Football grounds", "Badminton courts", "Stadiums and sports academies", "Training facilities"], label: "Applications" },
 ];
 
 const whyChooseUs = [
@@ -76,6 +37,11 @@ const whyChooseUs = [
 const Services = () => {
   return (
     <Layout>
+      <SEO
+        title="Invisible Grill Services"
+        description="Complete invisible grill services in Vijayawada - Balcony, window, staircase, child safety, pet safety, commercial & sports nets. Call 6303758255."
+        keywords="invisible grill services Vijayawada, balcony grills, window grills, child safety grills, pet safety, commercial grills"
+      />
       {/* Hero */}
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
@@ -131,12 +97,20 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <a
-                  href={CALL_LINK}
-                  className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
-                >
-                  <Phone size={16} /> Call Now for Free Consultation
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={CALL_LINK}
+                    className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
+                  >
+                    <Phone size={16} /> Call Now
+                  </a>
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-lg font-semibold text-sm hover:bg-primary/10 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

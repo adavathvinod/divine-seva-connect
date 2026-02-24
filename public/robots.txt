@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://shivasakthi-grills.lovable.app/sitemap.xml
