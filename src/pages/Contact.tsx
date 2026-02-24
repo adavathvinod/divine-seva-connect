@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Clock, Send } from "lucide-react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { CALL_LINK, WHATSAPP_LINK, GOOGLE_MAPS_LINK, PHONE_1, PHONE_2, LOCATION } from "@/lib/constants";
 
 const Contact = () => {
@@ -17,6 +18,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Us"
+        description="Contact Shiva Sakthi Invisible Grills Vijayawada. Free site visit & quotation. Call 6303758255 or 9493654016. Singh Nagar, Bombay Colony, Vijayawada."
+        keywords="contact invisible grills Vijayawada, invisible grills phone number, free site visit grills"
+      />
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">

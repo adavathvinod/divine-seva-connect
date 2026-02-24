@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Shield, Eye, Baby, Bird } from "lucide-react";
 import { CALL_LINK, WHATSAPP_LINK, GOOGLE_MAPS_LINK } from "@/lib/constants";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import HeroSlider from "@/components/HeroSlider";
 import StatsCounter from "@/components/StatsCounter";
 
@@ -61,7 +62,11 @@ const faqs = [
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Slider */}
+      <SEO
+        title="Invisible Grills Installation"
+        description="Shiva Sakthi Invisible Grills Vijayawada - Premium balcony, window & safety invisible grill installation. Child safety, bird protection. Call 6303758255."
+        keywords="invisible grills Vijayawada, balcony grills, window grills, child safety grills, bird protection grills, staircase grills"
+      />
       <HeroSlider />
 
       {/* Hero Section */}

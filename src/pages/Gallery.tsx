@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, X } from "lucide-react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { CALL_LINK } from "@/lib/constants";
 
 import balconyNight from "@/assets/balcony-night.png";
@@ -41,6 +42,11 @@ const Gallery = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Gallery"
+        description="View our invisible grill installations across Vijayawada. Balcony, window, staircase & pet safety grills gallery. Call Shiva Sakthi at 6303758255."
+        keywords="invisible grills gallery, grill installation photos Vijayawada, balcony grills images"
+      />
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">
