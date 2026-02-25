@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Check, ArrowLeft } from "lucide-react";
+import { Phone, MessageCircle, Check, ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import ProductSchema from "@/components/schemas/ProductSchema";
@@ -133,10 +133,10 @@ const ServiceDetail = () => {
 
               <div className="flex flex-wrap gap-3">
                 <a href={CALL_LINK} className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                  <Phone size={16} /> 📞 Call Now
+                  <Phone size={16} /> Call Now
                 </a>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[hsl(142,70%,45%)] text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                  💬 WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
               </div>
             </motion.div>

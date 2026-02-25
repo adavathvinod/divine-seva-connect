@@ -17,12 +17,6 @@ import windowGrills from "@/assets/window-grills.png";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
-const heroButtons = [
-  { label: "📞 Call Now", href: CALL_LINK, className: "gradient-cta" },
-  { label: "💬 WhatsApp", href: WHATSAPP_LINK, className: "bg-[hsl(142,70%,45%)]" },
-  { label: "📍 Get Directions", href: GOOGLE_MAPS_LINK, className: "bg-accent" },
-];
-
 const contentSections = [
   {
     image: balconyNight,
@@ -116,17 +110,28 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            {heroButtons.map((btn) => (
-              <a
-                key={btn.label}
-                href={btn.href}
-                target={btn.href.startsWith("http") ? "_blank" : undefined}
-                rel="noopener noreferrer"
-                className={`${btn.className} text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating`}
-              >
-                {btn.label}
-              </a>
-            ))}
+            <a
+              href={CALL_LINK}
+              className="gradient-cta text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating inline-flex items-center gap-2"
+            >
+              <Phone size={20} /> Call Now
+            </a>
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[hsl(142,70%,45%)] text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating inline-flex items-center gap-2"
+            >
+              <MessageCircle size={20} /> WhatsApp
+            </a>
+            <a
+              href={GOOGLE_MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating inline-flex items-center gap-2"
+            >
+              <MapPin size={20} /> Get Directions
+            </a>
           </motion.div>
         </div>
       </section>
@@ -156,7 +161,7 @@ const Index = () => {
                 <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6">{section.title}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">{section.text}</p>
                 <a href={CALL_LINK} className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-floating">
-                  <Phone size={20} /> 📞 Call Now
+                  <Phone size={20} /> Call Now
                 </a>
               </motion.div>
             </div>
@@ -244,11 +249,11 @@ const Index = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Get Safety for Your Family Today</h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">Book your free site visit and get a no-obligation quotation</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={CALL_LINK} className="bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity">
-              📞 Call Now
+            <a href={CALL_LINK} className="bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2">
+              <Phone size={20} /> Call Now
             </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors">
-              💬 WhatsApp Us
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2">
+              <MessageCircle size={20} /> WhatsApp Us
             </a>
           </div>
         </div>

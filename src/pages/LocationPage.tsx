@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, MapPin, Shield, CheckCircle } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Shield, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
@@ -75,7 +75,7 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-foreground/10 transition-colors"
               >
-                💬 WhatsApp Us
+                <MessageCircle size={20} /> WhatsApp Us
               </a>
             </div>
           </motion.div>
@@ -151,15 +151,15 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
               href={CALL_LINK}
               className="bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2"
             >
-              <Phone size={20} /> 📞 Call Now: 6303758255
+              <Phone size={20} /> Call Now: 6303758255
             </a>
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors"
+              className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
             >
-              💬 WhatsApp Us
+              <MessageCircle size={20} /> WhatsApp Us
             </a>
           </div>
         </div>
