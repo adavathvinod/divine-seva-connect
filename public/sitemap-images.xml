@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://shivasakthiinvisiblegrills.com/</loc>
+    <image:image>
+      <image:loc>https://shivasakthiinvisiblegrills.com/og-image.png</image:loc>
+      <image:caption>Shiva Sakthi Invisible Grills - Premium Installation Services</image:caption>
+      <image:title>Invisible Grills Vijayawada</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://shivasakthiinvisiblegrills.com/services</loc>
+    <image:image>
+      <image:loc>https://shivasakthiinvisiblegrills.com/og-image.png</image:loc>
+      <image:caption>Balcony, Window, and Safety Invisible Grills</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://shivasakthiinvisiblegrills.com/gallery</loc>
+    <image:image>
+      <image:loc>https://shivasakthiinvisiblegrills.com/og-image.png</image:loc>
+      <image:caption>Gallery of Invisible Grills Installation Projects</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

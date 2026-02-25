@@ -5,6 +5,11 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import HeroSlider from "@/components/HeroSlider";
 import StatsCounter from "@/components/StatsCounter";
+import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
+import OrganizationSchema from "@/components/schemas/OrganizationSchema";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
+import ImageObjectSchema from "@/components/schemas/ImageObjectSchema";
 
 import balconyNight from "@/assets/balcony-night.png";
 import balconyDay from "@/assets/balcony-day.png";
@@ -60,13 +65,27 @@ const faqs = [
 ];
 
 const Index = () => {
+  const imageList = [
+    { url: balconyNight, caption: "Balcony Invisible Grills at Night - Vijayawada" },
+    { url: balconyDay, caption: "Clear View Balcony Grills - Day Time" },
+    { url: windowGrills, caption: "Window Invisible Grills Installation" },
+    { url: hero2, caption: "Child Safety Grills for Apartments" },
+    { url: hero3, caption: "Bird Protection Invisible Grills" },
+  ];
+
   return (
     <Layout>
       <SEO
         title="Invisible Grills Installation"
         description="Shiva Sakthi Invisible Grills Vijayawada - Premium balcony, window & safety invisible grill installation. Child safety, bird protection. Call 6303758255."
         keywords="invisible grills Vijayawada, balcony grills, window grills, child safety grills, bird protection grills, staircase grills"
+        canonical="/"
       />
+      <LocalBusinessSchema />
+      <OrganizationSchema />
+      <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }]} />
+      <ImageObjectSchema images={imageList} />
       <HeroSlider />
 
       {/* Hero Section */}

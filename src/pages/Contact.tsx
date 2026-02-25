@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, MapPin, Clock, Send } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Send } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
+import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
+import { trackFormSubmission } from "@/lib/analytics";
 import { CALL_LINK, WHATSAPP_LINK, GOOGLE_MAPS_LINK, PHONE_1, PHONE_2, LOCATION } from "@/lib/constants";
 
 const Contact = () => {
@@ -13,6 +16,7 @@ const Contact = () => {
     e.preventDefault();
     const whatsappMsg = `Hi, I'm ${form.name}. My phone: ${form.phone}. ${form.message}`;
     window.open(`https://wa.me/916303758255?text=${encodeURIComponent(whatsappMsg)}`, "_blank");
+    trackFormSubmission("Contact Form");
     setSubmitted(true);
   };
 
@@ -22,7 +26,15 @@ const Contact = () => {
         title="Contact Us"
         description="Contact Shiva Sakthi Invisible Grills Vijayawada. Free site visit & quotation. Call 6303758255 or 9493654016. Singh Nagar, Bombay Colony, Vijayawada."
         keywords="contact invisible grills Vijayawada, invisible grills phone number, free site visit grills"
+        canonical="/contact"
       />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Contact", url: "/contact" },
+        ]}
+      />
+      <LocalBusinessSchema />
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">
@@ -101,26 +113,15 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-2xl p-6 shadow-card flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center flex-shrink-0">
-                  <Clock className="text-primary-foreground" size={20} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
-                  <p className="text-muted-foreground">Monday - Saturday: 9:00 AM - 7:00 PM</p>
-                  <p className="text-muted-foreground">Sunday: By Appointment</p>
-                </div>
-              </div>
-
               <div className="flex flex-wrap gap-3 mt-2">
                 <a href={CALL_LINK} className="gradient-cta text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
-                  <Phone size={16} /> 📞 Call Now
+                  <Phone size={16} />  Call Now
                 </a>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-[hsl(142,70%,45%)] text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
-                  <MessageCircle size={16} /> 💬 WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
                 <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer" className="bg-accent text-accent-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
-                  <MapPin size={16} /> 📍 Directions
+                  <MapPin size={16} /> Directions
                 </a>
               </div>
             </motion.div>

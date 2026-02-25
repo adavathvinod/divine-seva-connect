@@ -1,0 +1,45 @@
+/* TEAM */
+Business Owner: Shiva Sakthi
+Contact: shivasakthi.grills [at] gmail.com
+Location: Vijayawada, Andhra Pradesh, India
+
+/* SITE */
+Last update: 2026/02/25
+Software: VS Code, Vite, Bun
+Frameworks: React Router, Framer Motion, React Helmet
+SEO: Schema.org, Open Graph, Twitter Cards
+
+/* THANKS */
+Framework: React 18
+Build Tool: Vite
+Package Manager: Bun
+UI Library: shadcn/ui
+Icons: Lucide React
+Fonts: Google Fonts (Playfair Display, DM Sans)
+Animations: Framer Motion
+
+/* SERVICES */
+- Balcony Invisible Grills Installation
+- Window Safety Grills
+- Child Safety Grills
+- Staircase Invisible Grills
+- Pet Safety Grills
+- Bird Protection Grills
+- Commercial High-Rise Solutions
+- Sports & Stadium Nets
+
+/* CONTACT */
+Phone: +91 6303758255
+WhatsApp: +91 6303758255
+Email: shivasakthi.grills@gmail.com
+Address: Singh Nagar, Bombay Colony, Vijayawada, Andhra Pradesh 520010
+Website: https://shivasakthiinvisiblegrills.com
+
+/* SERVICE AREAS */
+Vijayawada, Guntur, Machilipatnam, Tenali, Gudivada, Mangalagiri
+
+/* META */
+Business Type: Local Service Provider
+Industry: Home Safety & Security
+Established: 2015
+Specialization: Invisible Grills & Safety Solutions

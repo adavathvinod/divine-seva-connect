@@ -1,8 +1,32 @@
+# Robots.txt for Shiva Sakthi Invisible Grills
+# Updated: February 2026
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /test/
+Disallow: /private/
+Disallow: *.json$
+Disallow: /api/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot instructions
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -10,7 +34,12 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: Pinterest
 Allow: /
 
-Sitemap: https://shivasakthi-grills.lovable.app/sitemap.xml
+# Sitemap locations
+Sitemap: https://shivasakthiinvisiblegrills.com/sitemap.xml
+Sitemap: https://shivasakthiinvisiblegrills.com/sitemap-images.xml
+
+# Host preference
+Host: https://shivasakthiinvisiblegrills.com

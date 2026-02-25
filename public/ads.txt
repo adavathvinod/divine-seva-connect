@@ -1,0 +1,11 @@
+# ads.txt for Shiva Sakthi Invisible Grills
+# Updated: February 2026
+#
+# Format: <domain>, <publisher ID>, <relationship>, <certification authority ID>
+# 
+# Add your advertising partners here if you plan to run ads
+# Example:
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Currently not using any ad networks
+# This file is ready for future ad implementations

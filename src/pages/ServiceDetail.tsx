@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { Phone, Check, ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
+import ProductSchema from "@/components/schemas/ProductSchema";
+import ServiceSchema from "@/components/schemas/ServiceSchema";
+import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
+import HowToSchema from "@/components/schemas/HowToSchema";
+import ImageObjectSchema from "@/components/schemas/ImageObjectSchema";
 import { CALL_LINK, WHATSAPP_LINK, BUSINESS_NAME } from "@/lib/constants";
 import { servicePages } from "@/lib/serviceData";
 
@@ -41,12 +46,48 @@ const ServiceDetail = () => {
 
   const otherServices = servicePages.filter((s) => s.slug !== slug);
 
+  const installationSteps = [
+    { name: "Site Visit & Measurement", text: "Our experts visit your location to take precise measurements and assess requirements." },
+    { name: "Material Selection", text: "Choose from premium stainless steel cables and fittings based on your needs." },
+    { name: "Professional Installation", text: "Skilled technicians install the invisible grills with proper tensioning and alignment." },
+    { name: "Quality Check & Handover", text: "Final inspection ensures everything meets our quality standards before handover." },
+  ];
+
   return (
     <Layout>
       <SEO
         title={service.metaTitle}
         description={service.metaDescription}
         keywords={service.metaKeywords}
+        canonical={`/services/${service.slug}`}
+      />
+      <ProductSchema
+        name={service.title}
+        description={service.metaDescription}
+        image={imageMap[service.imageKey]}
+      />
+      <ServiceSchema
+        serviceName={service.title}
+        description={service.metaDescription}
+        serviceType="Home Safety Installation"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: service.title, url: `/services/${service.slug}` },
+        ]}
+      />
+      <HowToSchema
+        name={`How to Install ${service.title}`}
+        description={`Step-by-step guide for professional ${service.title} installation`}
+        steps={installationSteps}
+      />
+      <ImageObjectSchema
+        images={[{
+          url: imageMap[service.imageKey],
+          caption: `${service.title} - Professional Installation in Vijayawada`,
+        }]}
       />
 
       {/* Hero */}

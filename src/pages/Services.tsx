@@ -3,6 +3,9 @@ import { Phone, Check, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
+import OrganizationSchema from "@/components/schemas/OrganizationSchema";
+import ServiceSchema from "@/components/schemas/ServiceSchema";
 import { CALL_LINK, BUSINESS_NAME } from "@/lib/constants";
 import { servicePages } from "@/lib/serviceData";
 
@@ -41,6 +44,19 @@ const Services = () => {
         title="Invisible Grill Services"
         description="Complete invisible grill services in Vijayawada - Balcony, window, staircase, child safety, pet safety, commercial & sports nets. Call 6303758255."
         keywords="invisible grill services Vijayawada, balcony grills, window grills, child safety grills, pet safety, commercial grills"
+        canonical="/services"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+        ]}
+      />
+      <OrganizationSchema />
+      <ServiceSchema
+        serviceName="Invisible Grills Installation Services"
+        description="Complete range of invisible grill installation services including balcony, window, staircase, and safety solutions"
+        serviceType="Home Safety & Installation"
       />
       {/* Hero */}
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
