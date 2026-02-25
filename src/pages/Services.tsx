@@ -33,7 +33,7 @@ const whyChooseUs = [
   "Professional installation team",
   "Long-lasting and rust-free solutions",
   "Modern and elegant designs",
-  "Affordable pricing",
+	"Transparent, value-for-money quotations",
   "Trusted service in Vijayawada",
 ];
 
@@ -41,7 +41,7 @@ const Services = () => {
   return (
     <Layout>
       <SEO
-        title="Invisible Grill Services"
+      title="Invisible Grill Services in Vijayawada"
         description="Complete invisible grill services in Vijayawada - Balcony, window, staircase, child safety, pet safety, commercial & sports nets. Call 6303758255."
         keywords="invisible grill services Vijayawada, balcony grills, window grills, child safety grills, pet safety, commercial grills"
         canonical="/services"
@@ -62,8 +62,8 @@ const Services = () => {
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Our Services
-          </motion.h1>
+			Invisible Grill Services in Vijayawada
+		  </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Complete range of invisible grill solutions for every need
           </motion.p>

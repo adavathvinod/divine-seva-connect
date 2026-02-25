@@ -50,7 +50,7 @@ const Gallery = () => {
   return (
     <Layout>
       <SEO
-        title="Gallery"
+      title="Invisible Grills Gallery Vijayawada"
         description="View our invisible grill installations across Vijayawada. Balcony, window, staircase & pet safety grills gallery. Call Shiva Sakthi at 6303758255."
         keywords="invisible grills gallery, grill installation photos Vijayawada, balcony grills images"
         canonical="/gallery"
@@ -65,13 +65,22 @@ const Gallery = () => {
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Our Gallery
+			Invisible Grills Gallery in Vijayawada
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             See our premium installations across Vijayawada
           </motion.p>
         </div>
       </section>
+
+	  <section className="py-10 md:py-14 bg-background">
+		<div className="container mx-auto px-4 max-w-3xl text-center">
+		  <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Real Installations from Vijayawada Homes</h2>
+		  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+			Every project in this gallery is from an actual home, apartment, or building in Vijayawada. These photos show how invisible grills protect balconies, windows, staircases, and pets while keeping your view open and your home looking modern.
+		  </p>
+		</div>
+	  </section>
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">

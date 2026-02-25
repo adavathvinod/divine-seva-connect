@@ -51,7 +51,7 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "What is the cost of invisible grills per square foot?", a: "The cost varies based on the type and quality of materials. Contact us for a free site visit and quotation." },
+  { q: "How can I get a quotation for invisible grills?", a: "We offer a free site visit in Vijayawada and provide a customized quotation based on your balcony, windows, and safety requirements." },
   { q: "How long does installation take?", a: "Typical installation takes 1-2 days depending on the area. We ensure quick and professional service." },
   { q: "Are invisible grills safe for children?", a: "Absolutely! Our grills use high-tension stainless steel cables that can withstand significant force, making them perfectly safe for children." },
   { q: "Do invisible grills block the view?", a: "No, that's the beauty of invisible grills. The thin cables are nearly invisible and don't obstruct your view or airflow." },
@@ -70,7 +70,7 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Invisible Grills Installation"
+      title="Invisible Grills in Vijayawada"
         description="Shiva Sakthi Invisible Grills Vijayawada - Premium balcony, window & safety invisible grill installation. Child safety, bird protection. Call 6303758255."
         keywords="invisible grills Vijayawada, balcony grills, window grills, child safety grills, bird protection grills, staircase grills"
         canonical="/"

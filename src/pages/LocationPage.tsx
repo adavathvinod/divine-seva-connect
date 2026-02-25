@@ -36,7 +36,6 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
-          { name: "Locations", url: "/locations" },
           { name: location, url: `/location/${location.toLowerCase()}` },
         ]}
       />

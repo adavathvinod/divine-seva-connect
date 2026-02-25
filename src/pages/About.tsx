@@ -12,7 +12,7 @@ const About = () => {
     <Layout>
       <SEO
         title="About Us"
-        description="About Shiva Sakthi Invisible Grills Vijayawada. 8+ years experience, 2000+ projects. Trusted invisible grill installation service in Andhra Pradesh."
+    description="About Shiva Sakthi Invisible Grills Vijayawada. 8+ years of experience, 2000+ projects. Trusted invisible grill installation service in Vijayawada."
         keywords="about Shiva Sakthi invisible grills, invisible grills company Vijayawada, trusted grill installation"
         canonical="/about"
       />

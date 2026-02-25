@@ -38,7 +38,7 @@ const Contact = () => {
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Contact Us
+			Contact Shiva Sakthi Invisible Grills Vijayawada
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Get in touch for a free site visit and quotation
