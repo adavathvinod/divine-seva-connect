@@ -52,7 +52,7 @@ const contentSections = [
 
 const testimonials = [
   { name: "Rajesh Kumar", location: "Vijayawada", text: "Excellent work! The invisible grills look amazing and my kids are safe now. Highly recommended!" },
-  { name: "Priya Sharma", location: "Guntur", text: "Very professional installation. The grills are completely invisible and the quality is outstanding." },
+  { name: "Priya Sharma", location: "Vijayawada", text: "Very professional installation. The grills are completely invisible and the quality is outstanding." },
   { name: "Venkat Rao", location: "Vijayawada", text: "Best invisible grill service in Vijayawada. Fair pricing and excellent workmanship. 5 stars!" },
 ];
 

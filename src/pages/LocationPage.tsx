@@ -6,7 +6,6 @@ import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
 import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
 import ServiceSchema from "@/components/schemas/ServiceSchema";
 import { CALL_LINK, WHATSAPP_LINK, BUSINESS_NAME } from "@/lib/constants";
-import { SERVICE_AREAS } from "@/lib/seoConfig";
 
 interface LocationPageProps {
   location: string;
@@ -24,8 +23,6 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
     "Bird Protection Grills",
     "Commercial Invisible Grills",
   ];
-
-  const areas = SERVICE_AREAS.map((area) => area.name);
 
   return (
     <Layout>
@@ -136,28 +133,6 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Coverage Areas */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-8">
-            We Also Serve Nearby Areas
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {areas.map((area) => (
-                <div
-                  key={area}
-                  className="bg-card rounded-lg p-4 text-center shadow-card hover:shadow-card-hover transition-shadow"
-                >
-                  <MapPin className="mx-auto mb-2 text-primary" size={20} />
-                  <p className="font-semibold text-sm">{area}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

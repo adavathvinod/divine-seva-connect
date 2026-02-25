@@ -5,11 +5,6 @@ export const SITE_URL = "https://shivasakthiinvisiblegrills.com";
 // Service Areas for Local SEO
 export const SERVICE_AREAS = [
   { name: "Vijayawada", state: "Andhra Pradesh", postalCode: "520010" },
-  { name: "Guntur", state: "Andhra Pradesh", postalCode: "522001" },
-  { name: "Machilipatnam", state: "Andhra Pradesh", postalCode: "521001" },
-  { name: "Tenali", state: "Andhra Pradesh", postalCode: "522201" },
-  { name: "Gudivada", state: "Andhra Pradesh", postalCode: "521301" },
-  { name: "Mangalagiri", state: "Andhra Pradesh", postalCode: "522503" },
 ];
 
 // Reviews Data (for schema)
@@ -69,9 +64,6 @@ export const SEO_KEYWORDS = {
 // Location-specific keywords
 export const LOCATION_KEYWORDS = {
   vijayawada: "invisible grills vijayawada, safety grills vijayawada, balcony grills vijayawada",
-  guntur: "invisible grills guntur, safety grills guntur, balcony grills guntur",
-  tenali: "invisible grills tenali, safety grills tenali",
-  mangalagiri: "invisible grills mangalagiri, safety grills mangalagiri",
 };
 
 // Social Media Profiles

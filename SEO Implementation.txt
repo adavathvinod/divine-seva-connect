@@ -14,18 +14,18 @@ Enhanced SEO Component
 Dynamic canonical URLs for all pages
 
 How-to schema for installation guides
-Service area markup (Vijayawada, Guntur, surrounding areas)
+Service area markup (Vijayawada)
 Speakable schema for voice search
 
 Phase 3: Local SEO Domination
 Local Business Optimization
 
 Complete LocalBusiness schema with all details
-Service area mapping for multiple locations
+Service area mapping
 Customer reviews integration
 Google Maps embed optimization
 
-Create area-specific pages (Vijayawada, Guntur, etc.)
+Create area-specific page (Vijayawada)
 Location-specific meta descriptions
 Local keyword optimization per area
 

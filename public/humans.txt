@@ -36,7 +36,7 @@ Address: Singh Nagar, Bombay Colony, Vijayawada, Andhra Pradesh 520010
 Website: https://shivasakthiinvisiblegrills.com
 
 /* SERVICE AREAS */
-Vijayawada, Guntur, Machilipatnam, Tenali, Gudivada, Mangalagiri
+Vijayawada
 
 /* META */
 Business Type: Local Service Provider

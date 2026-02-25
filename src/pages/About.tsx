@@ -59,7 +59,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Target, title: "Our Mission", desc: "To provide the highest quality invisible grill solutions that ensure safety for every family in Vijayawada and beyond." },
+              { icon: Target, title: "Our Mission", desc: "To provide the highest quality invisible grill solutions that ensure safety for every family in Vijayawada." },
               { icon: Eye, title: "Our Vision", desc: "To be the most trusted and preferred invisible grill installation company in Andhra Pradesh." },
               { icon: Heart, title: "Our Values", desc: "Quality craftsmanship, customer-first approach, transparent pricing, and professional installation at every project." },
             ].map((item) => (
