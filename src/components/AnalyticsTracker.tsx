@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-// Google Tag Manager ID - Replace with your actual GTM ID
-const GTM_ID = "GTM-XXXXXXX";
+// Google Tag Manager ID
+const GTM_ID = "GTM-MWGBHV4P";
 
-// Google Analytics 4 ID - Replace with your actual GA4 ID
-const GA4_ID = "G-XXXXXXXXXX";
+// Google Analytics 4 ID
+const GA4_ID = "G-2E1EP4RD1Y";
 
 const AnalyticsTracker = () => {
   const location = useLocation();
