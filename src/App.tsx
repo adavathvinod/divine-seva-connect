@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import ServiceDetail from "./pages/ServiceDetail";
 import VijayawadaLocation from "./pages/locations/Vijayawada";
+import HyderabadLocation from "./pages/locations/Hyderabad";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/location/vijayawada" element={<VijayawadaLocation />} />
+            <Route path="/location/hyderabad" element={<HyderabadLocation />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

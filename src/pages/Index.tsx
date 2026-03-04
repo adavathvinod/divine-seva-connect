@@ -51,7 +51,7 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "How can I get a quotation for invisible grills?", a: "We offer a free site visit in Vijayawada and provide a customized quotation based on your balcony, windows, and safety requirements." },
+  { q: "How can I get a quotation for invisible grills?", a: "We offer a free site visit in Vijayawada and Hyderabad, and provide a customized quotation based on your balcony, windows, and safety requirements." },
   { q: "How long does installation take?", a: "Typical installation takes 1-2 days depending on the area. We ensure quick and professional service." },
   { q: "Are invisible grills safe for children?", a: "Absolutely! Our grills use high-tension stainless steel cables that can withstand significant force, making them perfectly safe for children." },
   { q: "Do invisible grills block the view?", a: "No, that's the beauty of invisible grills. The thin cables are nearly invisible and don't obstruct your view or airflow." },
@@ -60,7 +60,7 @@ const faqs = [
 
 const Index = () => {
   const imageList = [
-    { url: balconyNight, caption: "Balcony Invisible Grills at Night - Vijayawada" },
+    { url: balconyNight, caption: "Balcony Invisible Grills at Night - Vijayawada & Hyderabad" },
     { url: balconyDay, caption: "Clear View Balcony Grills - Day Time" },
     { url: windowGrills, caption: "Window Invisible Grills Installation" },
     { url: hero2, caption: "Child Safety Grills for Apartments" },
@@ -70,9 +70,9 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-      title="Invisible Grills in Vijayawada"
-        description="Shiva Sakthi Invisible Grills Vijayawada - Premium balcony, window & safety invisible grill installation. Child safety, bird protection. Call 6303758255."
-        keywords="invisible grills Vijayawada, balcony grills, window grills, child safety grills, bird protection grills, staircase grills"
+      title="Invisible Grills in Vijayawada & Hyderabad"
+        description="Shiva Sakthi Invisible Grills - Premium balcony, window & safety invisible grill installation in Vijayawada & Hyderabad. Child safety, bird protection. Call 6303758255."
+        keywords="invisible grills Vijayawada Hyderabad, balcony grills, window grills, child safety grills, bird protection grills, staircase grills"
         canonical="/"
       />
       <LocalBusinessSchema />
@@ -101,7 +101,7 @@ const Index = () => {
             transition={{ delay: 0.2 }}
             className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10"
           >
-            Premium Invisible Grill Installation in Vijayawada for Homes & Apartments
+            Premium Invisible Grill Installation in Vijayawada & Hyderabad for Homes & Apartments
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -7,6 +7,29 @@ const GTM_ID = "GTM-MWGBHV4P";
 // Google Analytics 4 ID
 const GA4_ID = "G-2E1EP4RD1Y";
 
+// Google Ads Conversion ID
+const GOOGLE_ADS_ID = "AW-17990000747";
+const CONVERSION_ID = "2vVtCJz7uIIcEOvApoJD";
+
+// Function to track phone call conversions
+export const gtag_report_conversion = (url?: string) => {
+  const callback = function () {
+    if (typeof url !== "undefined") {
+      window.location.href = url;
+    }
+  };
+  
+  if (window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: `${GOOGLE_ADS_ID}/${CONVERSION_ID}`,
+      value: 1.0,
+      currency: "INR",
+      event_callback: callback,
+    });
+  }
+  return false;
+};
+
 const AnalyticsTracker = () => {
   const location = useLocation();
 
@@ -58,6 +81,25 @@ export const GA4Script = () => (
       }}
     />
     {/* End Google Analytics 4 */}
+  </>
+);
+
+// Google Ads Conversion Tracking Script
+export const GoogleAdsScript = () => (
+  <>
+    {/* Google Ads Conversion Tracking */}
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_ADS_ID}');
+        `,
+      }}
+    />
+    {/* End Google Ads Conversion Tracking */}
   </>
 );
 
