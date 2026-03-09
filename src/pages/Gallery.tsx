@@ -6,6 +6,7 @@ import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
 import ImageObjectSchema from "@/components/schemas/ImageObjectSchema";
 import { CALL_LINK } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 
 import balconyNight from "@/assets/balcony-night.png";
 import balconyDay from "@/assets/balcony-day.png";
@@ -99,7 +100,7 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/50 transition-colors flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity text-center">
                     <p className="text-primary-foreground font-semibold text-sm mb-2">{img.title}</p>
-                    <a href={CALL_LINK} onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-1 gradient-cta text-primary-foreground px-4 py-2 rounded-lg text-xs font-semibold">
+                    <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); e.stopPropagation(); trackPhoneCall("6303758255", CALL_LINK); }} className="inline-flex items-center gap-1 gradient-cta text-primary-foreground px-4 py-2 rounded-lg text-xs font-semibold">
                       <Phone size={12} /> Call Now
                     </a>
                   </div>

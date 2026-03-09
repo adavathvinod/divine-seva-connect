@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail } from "lucide-react";
 import { BUSINESS_NAME, LOCATION, PHONE_1, PHONE_2, CALL_LINK, WHATSAPP_LINK, GOOGLE_MAPS_LINK } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 
 const Footer = () => {
   return (
@@ -45,10 +46,10 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4">Contact Info</h4>
             <div className="flex flex-col gap-3">
-              <a href={CALL_LINK} className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
+              <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
                 <Phone size={16} /> +91 {PHONE_1}
               </a>
-              <a href={`tel:+91${PHONE_2}`} className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
+              <a href={`tel:+91${PHONE_2}`} onClick={(e) => { e.preventDefault(); trackPhoneCall("9493654016", `tel:+91${PHONE_2}`); }} className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
                 <Phone size={16} /> +91 {PHONE_2}
               </a>
               <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">

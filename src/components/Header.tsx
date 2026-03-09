@@ -4,6 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.jpeg";
 import { CALL_LINK } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -42,7 +43,7 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <a href={CALL_LINK} className="ml-3 gradient-cta text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
+          <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="ml-3 gradient-cta text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
             <Phone size={16} /> Call Now
           </a>
         </nav>
@@ -75,7 +76,7 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-              <a href={CALL_LINK} className="gradient-cta text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 mt-2">
+              <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="gradient-cta text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 mt-2">
                 <Phone size={16} /> Call Now
               </a>
             </div>

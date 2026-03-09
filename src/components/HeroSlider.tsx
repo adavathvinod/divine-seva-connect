@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import { CALL_LINK } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
@@ -65,6 +66,7 @@ const HeroSlider = () => {
             </p>
             <a
               href={CALL_LINK}
+              onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }}
               className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating"
             >
               <Phone size={20} /> Call Now for Free Site Visit

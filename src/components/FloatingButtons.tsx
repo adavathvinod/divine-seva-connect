@@ -3,12 +3,14 @@ import { CALL_LINK, WHATSAPP_LINK } from "@/lib/constants";
 import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 
 const FloatingButtons = () => {
-  const handlePhoneClick = () => {
-    trackPhoneCall("6303758255");
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    trackPhoneCall("6303758255", CALL_LINK);
   };
 
-  const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    trackWhatsAppClick(WHATSAPP_LINK);
   };
 
   return (

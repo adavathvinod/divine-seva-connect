@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Shield, Eye, Baby, Bird } from "lucide-react";
 import { CALL_LINK, WHATSAPP_LINK, GOOGLE_MAPS_LINK } from "@/lib/constants";
+import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import HeroSlider from "@/components/HeroSlider";
@@ -112,6 +113,7 @@ const Index = () => {
           >
             <a
               href={CALL_LINK}
+              onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }}
               className="gradient-cta text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating inline-flex items-center gap-2"
             >
               <Phone size={20} /> Call Now
@@ -120,6 +122,7 @@ const Index = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => { e.preventDefault(); trackWhatsAppClick(WHATSAPP_LINK); }}
               className="bg-[hsl(142,70%,45%)] text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating inline-flex items-center gap-2"
             >
               <MessageCircle size={20} /> WhatsApp
@@ -160,7 +163,7 @@ const Index = () => {
               >
                 <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6">{section.title}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">{section.text}</p>
-                <a href={CALL_LINK} className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-floating">
+                <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-floating">
                   <Phone size={20} /> Call Now
                 </a>
               </motion.div>
@@ -249,10 +252,10 @@ const Index = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Get Safety for Your Family Today</h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">Book your free site visit and get a no-obligation quotation</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={CALL_LINK} className="bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2">
+            <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2">
               <Phone size={20} /> Call Now
             </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); trackWhatsAppClick(WHATSAPP_LINK); }} className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2">
               <MessageCircle size={20} /> WhatsApp Us
             </a>
           </div>

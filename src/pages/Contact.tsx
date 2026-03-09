@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Send } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
 import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
-import { trackFormSubmission } from "@/lib/analytics";
+import { trackContactPageConversion, trackFormSubmission, trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 import { CALL_LINK, WHATSAPP_LINK, GOOGLE_MAPS_LINK, PHONE_1, PHONE_2, LOCATION } from "@/lib/constants";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    trackContactPageConversion();
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,8 +102,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone Numbers</h3>
-                  <a href={CALL_LINK} className="text-primary hover:underline block">+91 {PHONE_1}</a>
-                  <a href={`tel:+91${PHONE_2}`} className="text-primary hover:underline block">+91 {PHONE_2}</a>
+                  <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="text-primary hover:underline block">+91 {PHONE_1}</a>
+                  <a href={`tel:+91${PHONE_2}`} onClick={(e) => { e.preventDefault(); trackPhoneCall("9493654016", `tel:+91${PHONE_2}`); }} className="text-primary hover:underline block">+91 {PHONE_2}</a>
                 </div>
               </div>
 
@@ -114,10 +118,10 @@ const Contact = () => {
               </div>
 
               <div className="flex flex-wrap gap-3 mt-2">
-                <a href={CALL_LINK} className="gradient-cta text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
+                <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="gradient-cta text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
                   <Phone size={16} />  Call Now
                 </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-[hsl(142,70%,45%)] text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); trackWhatsAppClick(WHATSAPP_LINK); }} className="bg-[hsl(142,70%,45%)] text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
                   <MessageCircle size={16} /> WhatsApp
                 </a>
                 <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer" className="bg-accent text-accent-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">

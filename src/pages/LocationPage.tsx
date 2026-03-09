@@ -6,6 +6,7 @@ import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
 import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
 import ServiceSchema from "@/components/schemas/ServiceSchema";
 import { CALL_LINK, WHATSAPP_LINK, BUSINESS_NAME } from "@/lib/constants";
+import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 
 interface LocationPageProps {
   location: string;
@@ -64,6 +65,7 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href={CALL_LINK}
+                onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }}
                 className="inline-flex items-center gap-2 bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating"
               >
                 <Phone size={20} /> Call Now for Free Site Visit
@@ -72,6 +74,7 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => { e.preventDefault(); trackWhatsAppClick(WHATSAPP_LINK); }}
                 className="inline-flex items-center gap-2 border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-foreground/10 transition-colors"
               >
                 <MessageCircle size={20} /> WhatsApp Us
@@ -148,6 +151,7 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href={CALL_LINK}
+              onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }}
               className="bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2"
             >
               <Phone size={20} /> Call Now: 6303758255
@@ -156,6 +160,7 @@ const LocationPage = ({ location, postalCode, state }: LocationPageProps) => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => { e.preventDefault(); trackWhatsAppClick(WHATSAPP_LINK); }}
               className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:bg-primary-foreground/10 transition-colors inline-flex items-center gap-2"
             >
               <MessageCircle size={20} /> WhatsApp Us

@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
 import OrganizationSchema from "@/components/schemas/OrganizationSchema";
 import ServiceSchema from "@/components/schemas/ServiceSchema";
 import { CALL_LINK, BUSINESS_NAME } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 import { servicePages } from "@/lib/serviceData";
 
 import serviceBalconyBeforeAfter from "@/assets/service-balcony-before-after.jpeg";
@@ -116,6 +117,7 @@ const Services = () => {
                 <div className="flex flex-wrap gap-3">
                   <a
                     href={CALL_LINK}
+                    onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }}
                     className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
                   >
                     <Phone size={16} /> Call Now
@@ -169,7 +171,7 @@ const Services = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">Ready to Secure Your Home?</h2>
           <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">Get a free site visit and consultation from our expert team.</p>
-          <a href={CALL_LINK} className="inline-flex items-center gap-2 bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating">
+          <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="inline-flex items-center gap-2 bg-primary-foreground text-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-floating">
             <Phone size={20} /> Call Now
           </a>
         </div>

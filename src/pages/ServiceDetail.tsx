@@ -9,6 +9,7 @@ import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
 import HowToSchema from "@/components/schemas/HowToSchema";
 import ImageObjectSchema from "@/components/schemas/ImageObjectSchema";
 import { CALL_LINK, WHATSAPP_LINK, BUSINESS_NAME } from "@/lib/constants";
+import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 import { servicePages } from "@/lib/serviceData";
 
 import serviceBalconyBeforeAfter from "@/assets/service-balcony-before-after.jpeg";
@@ -132,10 +133,10 @@ const ServiceDetail = () => {
               </ul>
 
               <div className="flex flex-wrap gap-3">
-                <a href={CALL_LINK} className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                <a href={CALL_LINK} onClick={(e) => { e.preventDefault(); trackPhoneCall("6303758255", CALL_LINK); }} className="inline-flex items-center gap-2 gradient-cta text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
                   <Phone size={16} /> Call Now
                 </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[hsl(142,70%,45%)] text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); trackWhatsAppClick(WHATSAPP_LINK); }} className="inline-flex items-center gap-2 bg-[hsl(142,70%,45%)] text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
                   <MessageCircle size={16} /> WhatsApp
                 </a>
               </div>
