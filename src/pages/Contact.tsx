@@ -28,8 +28,8 @@ const Contact = () => {
     <Layout>
       <SEO
         title="Contact Us"
-        description="Contact Shiva Sakthi Invisible Grills Vijayawada. Free site visit & quotation. Call 6303758255 or 9493654016. Singh Nagar, Bombay Colony, Vijayawada."
-        keywords="contact invisible grills Vijayawada, invisible grills phone number, free site visit grills"
+        description="Contact Shiva Sakthi Invisible Grills Hyderabad and Vijayawada. Free site visit & quotation. Call 6303758255 or 9493654016. Singh Nagar, Bombay Colony, Vijayawada."
+        keywords="contact invisible grills Hyderabad and Vijayawada, invisible grills phone number, free site visit grills"
         canonical="/contact"
       />
       <BreadcrumbSchema
@@ -42,7 +42,7 @@ const Contact = () => {
       <section className="gradient-hero text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-display text-3xl md:text-5xl font-bold mb-6">
-			Contact Shiva Sakthi Invisible Grills Vijayawada
+      Contact Shiva Sakthi Invisible Grills Hyderabad and Vijayawada
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Get in touch for a free site visit and quotation

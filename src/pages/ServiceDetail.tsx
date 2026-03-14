@@ -87,7 +87,7 @@ const ServiceDetail = () => {
       <ImageObjectSchema
         images={[{
           url: imageMap[service.imageKey],
-          caption: `${service.title} - Professional Installation in Vijayawada`,
+          caption: `${service.title} - Professional Installation in Hyderabad and Vijayawada`,
         }]}
       />
 
@@ -98,7 +98,7 @@ const ServiceDetail = () => {
             {service.title}
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Professional {service.title} Installation in Vijayawada by {BUSINESS_NAME}
+            Professional {service.title} Installation in Hyderabad and Vijayawada by {BUSINESS_NAME}
           </motion.p>
         </div>
       </section>
@@ -114,7 +114,7 @@ const ServiceDetail = () => {
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <img
                 src={imageMap[service.imageKey]}
-                alt={`${service.title} installation in Vijayawada by ${BUSINESS_NAME}`}
+                alt={`${service.title} installation in Hyderabad and Vijayawada by ${BUSINESS_NAME}`}
                 className="w-full rounded-2xl shadow-card object-cover aspect-[4/3]"
               />
             </motion.div>

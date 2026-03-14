@@ -12,8 +12,8 @@ const About = () => {
     <Layout>
       <SEO
         title="About Us"
-    description="About Shiva Sakthi Invisible Grills Vijayawada. 8+ years of experience, 2000+ projects. Trusted invisible grill installation service in Vijayawada."
-        keywords="about Shiva Sakthi invisible grills, invisible grills company Vijayawada, trusted grill installation"
+    description="About Shiva Sakthi Invisible Grills Hyderabad and Vijayawada. 8+ years of experience, 2000+ projects. Trusted invisible grill installation service in Hyderabad and Vijayawada."
+      keywords="about Shiva Sakthi invisible grills, invisible grills company Hyderabad and Vijayawada, trusted grill installation"
         canonical="/about"
       />
       <BreadcrumbSchema
@@ -29,7 +29,7 @@ const About = () => {
             About Us
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Trusted invisible grill installation service in Vijayawada
+            Trusted invisible grill installation service in Hyderabad and Vijayawada
           </motion.p>
         </div>
       </section>
@@ -44,7 +44,7 @@ const About = () => {
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6">Who We Are</h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Shiva Sakthi Invisible Grills is a trusted invisible grill installation service in Vijayawada providing premium safety solutions for homes, apartments, and commercial buildings. We focus on quality materials, professional installation, and customer satisfaction.
+                Shiva Sakthi Invisible Grills is a trusted invisible grill installation service in Hyderabad and Vijayawada providing premium safety solutions for homes, apartments, and commercial buildings. We focus on quality materials, professional installation, and customer satisfaction.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 With over 8 years of experience and 2000+ completed projects, we have become the go-to choice for families who want to keep their loved ones safe without compromising on aesthetics.
@@ -59,7 +59,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Target, title: "Our Mission", desc: "To provide the highest quality invisible grill solutions that ensure safety for every family in Vijayawada." },
+              { icon: Target, title: "Our Mission", desc: "To provide the highest quality invisible grill solutions that ensure safety for every family in Hyderabad and Vijayawada." },
               { icon: Eye, title: "Our Vision", desc: "To be the most trusted and preferred invisible grill installation company in Andhra Pradesh." },
               { icon: Heart, title: "Our Values", desc: "Quality craftsmanship, customer-first approach, transparent pricing, and professional installation at every project." },
             ].map((item) => (
@@ -91,7 +91,7 @@ const About = () => {
             {[
               { icon: Shield, title: "Premium Materials", desc: "We use only high-grade 316 stainless steel cables that are rust-free and durable." },
               { icon: Award, title: "Expert Installation", desc: "Our trained technicians ensure precise and professional installation every time." },
-              { icon: Users, title: "500+ Happy Clients", desc: "We have a proven track record of satisfied customers across Vijayawada." },
+              { icon: Users, title: "500+ Happy Clients", desc: "We have a proven track record of satisfied customers across Hyderabad and Vijayawada." },
               { icon: Eye, title: "Invisible Design", desc: "Our grills are nearly invisible, maintaining the beauty of your home." },
               { icon: Target, title: "Free Site Visit", desc: "We offer free consultation and site visit before any project commitment." },
               { icon: Heart, title: "After-Sales Support", desc: "Our relationship doesn't end at installation. We provide ongoing support." },

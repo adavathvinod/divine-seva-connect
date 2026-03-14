@@ -11,7 +11,7 @@ const OrganizationSchema = () => {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}/og-image.png`,
-    description: "Professional invisible grills installation service provider in Vijayawada specializing in balcony, window, and child safety solutions.",
+    description: "Professional invisible grills installation service provider in Hyderabad and Vijayawada specializing in balcony, window, and child safety solutions.",
     sameAs: SOCIAL_PROFILES,
     contactPoint: {
       "@type": "ContactPoint",

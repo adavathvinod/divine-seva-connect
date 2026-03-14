@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="font-display text-xl font-bold mb-4">{BUSINESS_NAME}</h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Trusted invisible grill installation service in Vijayawada providing premium safety solutions for homes, apartments, and commercial buildings.
+              Trusted invisible grill installation service in Hyderabad and Vijayawada providing premium safety solutions for homes, apartments, and commercial buildings.
             </p>
           </div>
 

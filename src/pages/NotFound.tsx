@@ -13,7 +13,7 @@ const NotFound = () => {
   <>
     <SEO
       title="Page Not Found"
-      description="The page you are looking for is not available on Shiva Sakthi Invisible Grills Vijayawada."
+      description="The page you are looking for is not available on Shiva Sakthi Invisible Grills Hyderabad and Vijayawada."
       noindex
       canonical={location.pathname}
     />

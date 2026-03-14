@@ -98,7 +98,7 @@ export const generateImageSitemap = (): string => {
   xml += `    <loc>${SITE_URL}/</loc>\n`;
   xml += '    <image:image>\n';
   xml += `      <image:loc>${SITE_URL}/og-image.png</image:loc>\n`;
-  xml += '      <image:caption>Shiva Sakthi Invisible Grills Vijayawada</image:caption>\n';
+  xml += '      <image:caption>Shiva Sakthi Invisible Grills Hyderabad and Vijayawada</image:caption>\n';
   xml += '      <image:title>Premium Invisible Grills Installation</image:title>\n';
   xml += '    </image:image>\n';
   xml += "  </url>\n";

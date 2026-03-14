@@ -29,7 +29,7 @@ const SEO = ({
   locale = "en_IN",
   noindex = false,
 }: SEOProps) => {
-  const fullTitle = `${title} | ${BUSINESS_NAME} | Vijayawada`;
+  const fullTitle = `${title} | ${BUSINESS_NAME} | Hyderabad and Vijayawada`;
   const fullCanonical = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
   const fullImage = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
@@ -48,7 +48,7 @@ const SEO = ({
 
       {/* Geo Tags */}
       <meta name="geo.region" content="IN-AP" />
-      <meta name="geo.placename" content="Vijayawada" />
+      <meta name="geo.placename" content="Hyderabad and Vijayawada" />
       <meta name="geo.position" content="16.5062;80.6480" />
       <meta name="ICBM" content="16.5062, 80.6480" />
 

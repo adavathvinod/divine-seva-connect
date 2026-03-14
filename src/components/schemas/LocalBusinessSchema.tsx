@@ -10,7 +10,7 @@ const LocalBusinessSchema = () => {
     name: BUSINESS_NAME,
     image: `${SITE_URL}/og-image.png`,
     logo: `${SITE_URL}/logo.png`,
-    description: "Premium invisible grills installation service in Vijayawada for balconies, windows, staircases, and child safety. Rust-free stainless steel grills with professional installation.",
+    description: "Premium invisible grills installation service in Hyderabad and Vijayawada for balconies, windows, staircases, and child safety. Rust-free stainless steel grills with professional installation.",
     url: SITE_URL,
     telephone: `+91${PHONE_1}`,
     paymentAccepted: PAYMENT_METHODS.join(", "),

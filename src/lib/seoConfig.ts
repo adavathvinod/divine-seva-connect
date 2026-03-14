@@ -4,6 +4,7 @@ export const SITE_URL = "https://shivasakthiinvisiblegrills.com";
 
 // Service Areas for Local SEO
 export const SERVICE_AREAS = [
+  { name: "Hyderabad", state: "Telangana", postalCode: "500001" },
   { name: "Vijayawada", state: "Andhra Pradesh", postalCode: "520010" },
 ];
 
@@ -25,36 +26,36 @@ export const BUSINESS_REVIEWS = [
     author: "Venkat Rao",
     rating: 5,
     datePublished: "2024-03-05",
-    reviewBody: "Best invisible grill service in Vijayawada. Fair pricing and excellent workmanship. 5 stars!",
+    reviewBody: "Best invisible grill service in Hyderabad and Vijayawada. Fair pricing and excellent workmanship. 5 stars!",
   },
 ];
 
 // Long-tail Keywords by Service
 export const SEO_KEYWORDS = {
   balcony: [
-    "invisible grills for balcony vijayawada",
-    "balcony safety grills vijayawada",
-    "child safety balcony grills vijayawada",
+    "invisible grills for balcony hyderabad and vijayawada",
+    "balcony safety grills hyderabad and vijayawada",
+    "child safety balcony grills hyderabad and vijayawada",
     "pigeon protection balcony grills",
     "invisible grills installation near me",
-    "balcony safety net vijayawada",
+    "balcony safety net hyderabad and vijayawada",
   ],
   window: [
-    "window invisible grills vijayawada",
-    "window safety grills vijayawada",
+    "window invisible grills hyderabad and vijayawada",
+    "window safety grills hyderabad and vijayawada",
     "bird protection window grills",
     "invisible grills for windows",
-    "window safety net vijayawada",
+    "window safety net hyderabad and vijayawada",
   ],
   child: [
-    "child safety grills vijayawada",
+    "child safety grills hyderabad and vijayawada",
     "kid safety invisible grills",
     "children safety net for balcony",
     "child proof balcony grills",
     "invisible grills for child safety",
   ],
   commercial: [
-    "commercial invisible grills vijayawada",
+    "commercial invisible grills hyderabad and vijayawada",
     "office building safety grills",
     "high rise building grills",
     "apartment invisible grills",
@@ -63,7 +64,7 @@ export const SEO_KEYWORDS = {
 
 // Location-specific keywords
 export const LOCATION_KEYWORDS = {
-  vijayawada: "invisible grills vijayawada, safety grills vijayawada, balcony grills vijayawada",
+  vijayawada: "invisible grills hyderabad and vijayawada, safety grills hyderabad and vijayawada, balcony grills hyderabad and vijayawada",
 };
 
 // Social Media Profiles
